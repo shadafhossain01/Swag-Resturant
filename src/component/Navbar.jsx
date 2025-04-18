@@ -6,7 +6,7 @@ return(
     <div className="header">
     <div className="container">
     <div className="navbar">
-    <img src={logo}/>
+    <Link to="/"> <img src={logo}/> </Link>
     <ul className="navbar-menu">
     <li> <Link to="/"> Home </Link></li>
     <li> <Link to="/about"> About </Link></li>

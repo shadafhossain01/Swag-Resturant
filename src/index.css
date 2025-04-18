@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: sans-serif;
+}
+
 .header{
     -webkit-box-shadow: 0px 8px 22px -8px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 8px 22px -8px rgba(0,0,0,0.75);
@@ -39,7 +43,6 @@ align-items: center;
 .navbar-menu li a{
     text-decoration: none;
     color: #545454;
-    font-family: sans-serif;
     font-weight: 600;
     font-size: 16px;
 }
@@ -49,9 +52,107 @@ align-items: center;
     background: #f6cb16;
     border: none;
     border-radius: 5px;
-    font-family: sans-serif;
     font-weight: 500;
     font-size: 16px;
     display: flex;
     gap: 10px;
+}
+
+.search-box{
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.search-box input{
+    width: 480px;
+    padding: 12px 10px;
+    border: 1px solid #cbcbcb;
+    font-size: 17px;
+}
+
+.search-box input:focus{
+    outline: 2px solid  #f6cb16;
+}
+
+.search-box button{
+    padding: 14px;
+    background: #f6cb16;
+    border: none;
+    cursor: pointer;
+}
+
+.resturant-cards{
+    display: flex;
+    margin-top: 90px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.resturant-cards img{
+    width: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.resCard{
+    position: relative;
+    width: 240px;
+    height: 350px;
+    margin-bottom: 35px;
+    padding: 10px;
+    box-shadow: -1px 5px 10px 5px rgba(112, 112, 112, .2);
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    cursor: pointer;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;
+}
+
+.resCard h4{
+    margin: 10px 0px;
+    color: #1d1d1d;
+}
+
+.resCard p{
+    font-size: 12px;
+    line-height: 17px;
+}
+
+.rateDiv{
+    margin: 10px 0px;
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 75px;
+}
+
+.greenBtn{
+background-color: #00ad1d;
+color: #fff;
+border: none;
+padding: 10px;
+border-radius: 10px;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+-ms-border-radius: 10px;
+-o-border-radius: 10px;
+}
+
+.redBtn{
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
