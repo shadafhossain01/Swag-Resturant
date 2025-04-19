@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { url } from '../utils/common';
 import ResturantCard from './ResturantCard';
+import Shimmer from "./Shimmer"
 
 const ResturantBody = () => {
     const [resData,setResData]=useState([])
@@ -24,12 +25,12 @@ const ResturantBody = () => {
         setFilterData(newData)
     }
 
-     useEffect(()=>{
-            let searchRest=resData.filter((item)=>item.info.name.toLowerCase().includes(inputValue.toLowerCase()))
-        setFilterData(searchRest)
-        },[inputValue,resData])
+    // const filterRes=resData.filter((item)=>item.name.toLowerCase().includes(inputValue.toLocaleLowerCase()))
+    // setFilterData(filterRes)
 
-
+    if(filterData.length==0){
+        return <Shimmer/>
+    }
   return (
     <>
         <div className='container'>

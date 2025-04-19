@@ -47,6 +47,10 @@ align-items: center;
     font-size: 16px;
 }
 
+.navbar-menu li svg{
+    font-size: 25px;
+}
+
 .navbar-menu button{
     padding: 10px 16px;
     background: #f6cb16;
@@ -155,4 +159,43 @@ border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+}
+
+.footer {
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, .71);
+    padding: 25px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.footer p{
+    font-weight: 700;
+    font-style: italic;
+}
+.footer p span{
+  color: #f6cb16;
+}
+
+.shimmer-container{
+    display: flex;
+    margin-top: 90px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.shimmer-card{
+    width: 240px;
+    height: 350px;
+    background-color: #f3f3f3;
+    margin-bottom: 35px;
+    padding: 10px;
+    box-shadow: -1px 5px 10px 5px rgba(112, 112, 112, .2);
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    cursor: pointer;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;
 }
