@@ -25,12 +25,16 @@ const ResturantBody = () => {
         setFilterData(newData)
     }
 
-    // const filterRes=resData.filter((item)=>item.name.toLowerCase().includes(inputValue.toLocaleLowerCase()))
-    // setFilterData(filterRes)
+    
+    useEffect(()=>{
+        const filterRes=resData.filter((item)=>item?.info?.name?.toLowerCase().includes(inputValue?.toLowerCase()))
+        setFilterData(filterRes)
+    },[inputValue,resData])
 
-    if(filterData.length==0){
-        return <Shimmer/>
-    }
+      if(resData.length==0){
+           return <Shimmer/>
+      }
+
   return (
     <>
         <div className='container'>
@@ -40,9 +44,10 @@ const ResturantBody = () => {
         </div>
         <div className='resturant-cards'>
         {
-            filterData.map((res)=>(
+
+         filterData.length>0 ?(filterData?.map((res)=>(
                 <ResturantCard data={res} key={res.info.id} />
-            ))
+            ))) : (<h2 className='errorText'>Sorry, we couldn't find any results for "{inputValue}"</h2> )
         
         }
         </div>
