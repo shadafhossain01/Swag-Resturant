@@ -13,7 +13,7 @@ const ResturantCard = (props) => {
         <p>{cuisines.join(", ")}</p>
         <h4> Delivery Time : {sla.deliveryTime} minutes</h4>
         <div className='rateDiv'>
-            <button className={`${externalRatings.aggregatedRating.rating >3.5 ? "greenBtn" : "redBtn"}`} > <MdStarRate/> {externalRatings.aggregatedRating.rating=="--" ? random : externalRatings.aggregatedRating.rating}</button>
+            <button className={`${externalRatings.aggregatedRating.rating >3.5 ? "darkBtn" : "redBtn"}`} > <MdStarRate/> {externalRatings.aggregatedRating.rating=="--" ? random : externalRatings.aggregatedRating.rating}</button>
             <span>{costForTwo}</span>
         </div>
         </div>

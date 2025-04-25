@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { url } from '../utils/common';
 import ResturantCard from './ResturantCard';
 import Shimmer from "./Shimmer"
+import { Link } from "react-router-dom";
 
 const ResturantBody = () => {
     const [resData,setResData]=useState([])
@@ -46,7 +47,9 @@ const ResturantBody = () => {
         {
 
          filterData.length>0 ?(filterData?.map((res)=>(
-                <ResturantCard data={res} key={res.info.id} />
+                <Link key={res.info.id} to={"/resturant/"+res.info.id}>
+                <ResturantCard data={res} />
+                </Link>
             ))) : (<h2 className='errorText'>Sorry, we couldn't find any results for "{inputValue}"</h2> )
         
         }
