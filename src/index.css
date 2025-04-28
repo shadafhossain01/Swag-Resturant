@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family: sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .header{
@@ -32,12 +32,22 @@ align-items: center;
 
 .navbar-menu{
     display: flex;
-    gap: 35px;
+    gap: 10px;
     align-items: center;
 }
 
 .navbar-menu li{
     list-style: none;
+    padding: 10px;
+}
+
+.navbar-menu li:hover{
+    background-color: #f6cb16;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 .navbar-menu li a{
@@ -280,4 +290,55 @@ border-radius: 10px;
     font-size: 16px;
     border-left: 2px solid #fff;
     padding-left: 25px;
+}
+
+.about-box{
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.left-about , .right-about{
+    padding: 55px 90px;
+    box-shadow: 6px 6px 10px -1px rgb(114 109 109 / 71%);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.left-about , .right-about a , a:-webkit-any-link {
+text-decoration: none !important;
+}
+
+.left-about p{
+    color: #8c8c8c;
+    font-style: italic;
+    font-size: 18px;
+    margin: 25px 0px;
+}
+
+.left-about svg{
+    font-size: 40px;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+.right-about h2 span{
+    color: #f6cb16;
+}
+
+.right-about a{
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 25px;
+    border: 1px solid #ffffff;
+    background-color: #000000bf;
+    color: #fccc02;
+    cursor: pointer;
+    font-weight: 800;
+    border-radius: 15px;
 }
