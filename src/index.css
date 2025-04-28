@@ -298,16 +298,28 @@ border-radius: 10px;
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    margin-bottom: 326px;
 }
 
-.left-about , .right-about{
-    padding: 55px 90px;
+ .right-about{
+    padding: 65px 90px;
     box-shadow: 6px 6px 10px -1px rgb(114 109 109 / 71%);
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.left-about{
+    width: 50%;
+    padding: 20px 0px;
+    box-shadow: 6px 6px 10px -1px rgb(114 109 109 / 71%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 .left-about , .right-about a , a:-webkit-any-link {
@@ -318,7 +330,7 @@ text-decoration: none !important;
     color: #8c8c8c;
     font-style: italic;
     font-size: 18px;
-    margin: 25px 0px;
+    margin: 20px 0px;
 }
 
 .left-about svg{
@@ -327,13 +339,31 @@ text-decoration: none !important;
     cursor: pointer;
 }
 
+
+
+.leftImg{
+width: 30%;
+}
+
+.leftImg img{
+    width: 100%;
+}
+
+.bySide{
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 30px;
+}
+
 .right-about h2 span{
     color: #f6cb16;
 }
 
 .right-about a{
     display: inline-block;
-    margin-top: 25px;
+    margin-top: 40px;
     padding: 15px 25px;
     border: 1px solid #ffffff;
     background-color: #000000bf;
@@ -341,4 +371,12 @@ text-decoration: none !important;
     cursor: pointer;
     font-weight: 800;
     border-radius: 15px;
+}
+
+.right-about h3 ,.left-about{
+    margin-top: 20px;
+}
+
+.left-about h3{
+    font-size: 30px;
 }
