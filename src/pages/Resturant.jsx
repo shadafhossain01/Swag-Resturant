@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { MdStarRate } from 'react-icons/md'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { resPicture } from '../utils/common'
 
 const Resturant = () => {
 
 const [resData,setResData]=useState()
 const {id}=useParams()
+const navigate=useNavigate();
 
     useEffect(()=>{
         fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     const fetchData=async()=>{
@@ -27,6 +29,10 @@ const {id}=useParams()
     )
     const {cloudinaryImageId, avgRating,costForTwoMessage,cuisines,name,totalRatingsString}=resData
 
+    const handleBack=()=>{
+        return navigate(-1);
+    }
+
   return (
     <div className='container'>
     <div className='resDiv'>
@@ -41,6 +47,7 @@ const {id}=useParams()
         </div>
     </div>
     </div>
+    <button className='backBtn' onClick={handleBack}>Go Back</button>
     </div>
   )
 }

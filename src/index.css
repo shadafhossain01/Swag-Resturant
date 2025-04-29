@@ -380,3 +380,16 @@ width: 30%;
 .left-about h3{
     font-size: 30px;
 }
+
+.backBtn{
+    display: block;
+    margin: 55px auto;
+    padding: 15px 40px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: italic;
+    background: #f6cb16;
+    cursor: pointer;
+}
