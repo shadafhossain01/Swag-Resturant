@@ -427,7 +427,7 @@ font-size: 22px;
 }
 
 .single-body{
-    padding-bottom: 15px;
+    padding-bottom: 30px;
     border-bottom: 2px solid #a5a5a5;
     display: flex;
     justify-content: space-between;
@@ -453,6 +453,26 @@ font-size: 22px;
     color: #838383;
 }
 
-.single-body img{
-    width: 18%;
+.single-body .img-box img{
+width: 40%;
+}
+
+.single-body .img-box{
+    display: flex;
+justify-content: end;
+align-items: center;
+position: relative;
+}
+
+.single-body .img-box button{
+    position: absolute;
+    bottom: -25px;
+    right: 37px;
+    padding: 13px 18px;
+    border-radius: 10px;
+    border: none;
+    background: #dcb002;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 12px;
 }

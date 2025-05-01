@@ -24,10 +24,14 @@ const ResturantDetail = ({data}) => {
         item.card.card.itemCards.map((value)=>(
             <div key={value.card.info.id} className='single-body'>
                 <div style={{width:"60%"}}>
-                    <h4>{value.card.info.name} <span>-₹{value.card.info.price/100}</span></h4>
+                    <h4>{value.card.info.name} <span>-₹{value.card.info.price/100 || value.card.info.defaultPrice
+                      /100 }</span></h4>
                     <p>{value.card.info.description}</p>
                 </div>
+                    <div className='img-box'>
                     <img src={`${resPicture}${value.card.info.imageId}`}/>
+                    <button>Add to Cart</button>
+                    </div>
             </div>
         ))
       }
