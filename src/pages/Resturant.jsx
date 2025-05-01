@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { MdStarRate } from 'react-icons/md'
 import { useNavigate, useParams } from 'react-router-dom'
 import { resPicture } from '../utils/common'
+import ResturantDetail from '../component/ResturantDetail'
 
 const Resturant = () => {
-
+const [resDetail,setResDetail]=useState()
 const [resData,setResData]=useState()
 const {id}=useParams()
 const navigate=useNavigate();
@@ -18,6 +19,8 @@ const navigate=useNavigate();
         const data=await fetch("https://foodfire.onrender.com/api/menu?page-type=REGULAR_MENU&complete-menu=true&lat=21.1702401&lng=72.83106070000001&&submitAction=ENTER&restaurantId="+id)
         const res= await data.json()
         setResData(res.data.cards[2].card.card.info);
+        let newData=res.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards.filter((item)=>item.card.card?.["@type"]=="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
+        setResDetail(newData)
     }
 
     if(!resData) return (
@@ -47,6 +50,7 @@ const navigate=useNavigate();
         </div>
     </div>
     </div>
+    <ResturantDetail data={resDetail}/>
     <button className='backBtn' onClick={handleBack}>Go Back</button>
     </div>
   )
