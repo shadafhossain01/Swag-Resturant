@@ -404,6 +404,9 @@ width: 30%;
     width: 1200px;
     margin: 5px auto;
     cursor: pointer;
+    box-shadow: -1px 8px 60px -21px rgba(0,0,0,0.77);
+    -webkit-box-shadow: -1px 8px 60px -21px rgba(0,0,0,0.77);
+    -moz-box-shadow: -1px 8px 60px -21px rgba(0,0,0,0.77);
 }
 
 .accordian-header{
