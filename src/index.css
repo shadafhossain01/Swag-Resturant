@@ -60,6 +60,7 @@ align-items: center;
 .navbar-menu li svg{
     font-size: 25px;
     cursor: pointer;
+    margin-right: 25px;
 }
 
 .navbar-menu button{

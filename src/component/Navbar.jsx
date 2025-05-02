@@ -13,7 +13,7 @@ return(
     <li> <Link to="/"> Home </Link></li>
     <li> <Link to="/about"> About </Link></li>
     <li> <Link to="/contact"> Contact </Link></li>
-    <li> <IoMdCart/> </li>
+    <li> <Link to="/cart"> <IoMdCart/> </Link> </li>
     <button>Login <FaUser/> </button>
     </ul>
     </div>
