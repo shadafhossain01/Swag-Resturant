@@ -36,7 +36,7 @@ const ResturantDetail = ({data}) => {
                 </div>
                     <div className='img-box'>
                     <img src={`${resPicture}${value.card.info.imageId}`}/>
-                    <button onClick={()=>handleAddToCart(item)}>Add to Cart</button>
+                    <button onClick={()=>handleAddToCart(value)}>Add to Cart</button>
                     </div>
             </div>
         ))
