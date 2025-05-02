@@ -1,13 +1,19 @@
 import React, { useState } from 'react'
 import { FaRegArrowAltCircleDown } from "react-icons/fa";
 import { resPicture } from '../utils/common';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../slices/cartSlice';
 
 const ResturantDetail = ({data}) => {
 
  const [showIndex,setShowIndex]=useState(null)
 
- const handleShow=(idx)=>{
+  const handleShow=(idx)=>{
     setShowIndex(showIndex==idx?null:idx)
+ }
+    const dispatch=useDispatch()
+   const handleAddToCart=(item)=>{
+    dispatch(addToCart(item))
  }
 
   return (
@@ -30,7 +36,7 @@ const ResturantDetail = ({data}) => {
                 </div>
                     <div className='img-box'>
                     <img src={`${resPicture}${value.card.info.imageId}`}/>
-                    <button>Add to Cart</button>
+                    <button onClick={()=>handleAddToCart(item)}>Add to Cart</button>
                     </div>
             </div>
         ))

@@ -63,6 +63,20 @@ align-items: center;
     margin-right: 25px;
 }
 
+.cartList{
+position: relative;
+}
+
+.cartNumber{
+    position: absolute;
+    left: 38px;
+    top: -1px;
+    background: #f02525;
+    color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+}
+
 .navbar-menu button{
     padding: 10px 16px;
     background: #f6cb16;
