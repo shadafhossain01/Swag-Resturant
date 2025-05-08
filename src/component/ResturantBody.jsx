@@ -12,7 +12,7 @@ const ResturantBody = () => {
     const fetchData=async()=>{
         const res=await fetch(url);
         const data =await res.json();
-        const resList=data.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+        const resList=data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
         setResData(resList) 
         setFilterData(resList)
     }
@@ -32,9 +32,9 @@ const ResturantBody = () => {
         setFilterData(filterRes)
     },[inputValue,resData])
 
-      if(resData.length==0){
-           return <Shimmer/>
-      }
+       if(resData.length==0){
+            return <Shimmer/>
+       }
 
   return (
     <>
