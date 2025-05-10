@@ -60,7 +60,7 @@ const Cart = () => {
 
      {
       cartItem.length>0 && <div>
-      <h5>Total Price: ₹{cartItem.reduce((acc,cur)=>acc+(cur.card.info.price / 100 || cur.card.info.defaultPrice / 100),0)}</h5>
+      <h5>Total Price: ₹{cartItem.reduce((acc,cur)=>acc+((cur.card.info.price / 100 || cur.card.info.defaultPrice / 100)*cur.quantity),0)}</h5>
       <button className='clearCart' onClick={handleClearCart}>Clear Cart</button>
       </div>
      }

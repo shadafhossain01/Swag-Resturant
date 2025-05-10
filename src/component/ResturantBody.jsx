@@ -28,11 +28,11 @@ const ResturantBody = () => {
 
     
     useEffect(()=>{
-        const filterRes=resData.filter((item)=>item?.info?.name?.toLowerCase().includes(inputValue?.toLowerCase()))
+        const filterRes=resData?.filter((item)=>item?.info?.name?.toLowerCase().includes(inputValue?.toLowerCase()))
         setFilterData(filterRes)
     },[inputValue,resData])
 
-       if(resData.length==0){
+       if(resData?.length==0){
             return <Shimmer/>
        }
 
@@ -46,7 +46,7 @@ const ResturantBody = () => {
         <div className='resturant-cards'>
         {
 
-         filterData.length>0 ?(filterData?.map((res)=>(
+         filterData?.length>0 ?(filterData?.map((res)=>(
                 <Link key={res.info.id} to={"/resturant/"+res.info.id}>
                 <ResturantCard data={res} />
                 </Link>
